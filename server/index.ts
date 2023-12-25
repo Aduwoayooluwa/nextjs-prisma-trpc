@@ -64,7 +64,8 @@ export const appRouter = router({
             }
 
             // Return the user data excluding the password for security
-            return { ...checkUser, password: null };
+
+            return { message: "Account found", name: checkUser.name, email: checkUser.email, id: checkUser.id, username: checkUser.username };
         } catch (error) {
             // Handle any unexpected errors during the login process
             if (error instanceof Error) {
