@@ -7,7 +7,7 @@ import React, { useState } from "react";
 import { trpc } from "./_trpc/client";
 
 export default function GeneralProvider({ children }: {
-    children : React.ReactNode
+    children : Readonly<React.ReactNode>
 }) {
     const [queryClient] = useState(() => new QueryClient({}));
     const [trpcClient] = useState(() => {
